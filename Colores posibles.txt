@@ -1,0 +1,23 @@
+Colores posibles
+
+En el Café house
+
+->  Header
+	negro (header con el nav y el logo)?
+	#282726 (contenedor de imagen y texto en el header)  
+
+
+->  Main
+	background-color: #e4e4e4; (clarito) --> Este me podría servir para contenedores dentro del main si el fondo va a ser oscuro
+
+	color: #333
+	
+
+->  Footer 
+	background-color: #302f2f;
+ 
+
+
+
+->  Letra
+  	Open Sans, Sans-serif?
