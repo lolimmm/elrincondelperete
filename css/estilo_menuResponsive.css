@@ -1,0 +1,121 @@
+/* 
+.menu{
+    margin: auto;
+    width: max-content;
+}  */
+
+.menu ul{
+    /*Igualamos a cero tanto el margen como el padding
+    y eliminamos los marcadores predeterminados*/
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    /*Establecemos el máximo ancho de la barra de navegación
+    y el color de fondo*/
+    max-width: 42rem;
+    background-color: #38b2ac;
+    /*Posicionamos con FLEX*/
+    display: flex;
+}
+
+/*Hacemos que los elementos ancla de la lista
+se comporten como botones*/
+.menu ul a{
+    display: block;
+    padding: 0 2em; /*Relleno a la derecha e izquierda de las anclas*/
+    line-height: 2.1em; /*Centrar verticalmente el texto*/
+    text-decoration: none; /*Desactivar el subrayado*/
+    color: white;
+    font-weight: bold;
+    /*Añadimos un espacio entre los enlaces de la barra de navegación*/
+    border-left: #CCCCCC solid thin;
+}
+.menu ul li.primerli a{
+    border-left: none; /*Para eliminar espacio a la izquierda*/
+}
+/*Cambiar el color del elemento ancla cuando se coloque el puntero*/
+.menu ul a:hover{
+    color:black;
+    background-color: #2c7a7b;
+}
+
+
+/*-----------*/
+/*--Submenú--*/
+/*-----------*/
+.menu li ul{
+    display: none; /*Ocultamos el submenú*/
+    position: absolute; /*Para que el menú principal no se vea afectado*/
+}
+/*Al pasar sobre el botón del menú, aparece el submenú*/
+.menu li:hover ul{
+    display: block;
+}
+.menu li ul li{
+    width: 10em; /*Todos los elementos del submenú tienen el mismo tamaño*/
+    float: none; /*Alineamos en vertical haciendo que ya no floten*/
+}
+
+/*--------------------*/
+/*--Menú hamburguesa--*/
+/*--------------------*/
+
+
+button#burger{
+    display: none; /*Ocultamos el botón*/
+}
+button#burger:focus + .menu{
+    display: block; /*Al pulsar el botón aparece el nav*/
+}
+
+/*El menú hamburguesa aparecerá con esta resolución o menor*/
+@media screen and (max-width:768Px){
+
+/*Configuramos el menú hamburguesa*/
+button#burger{
+    display: block; /*Se muestra el botón*/
+    /*Damos margen automático izquierdo para posicionar a la derecha*/
+    margin-left: auto; 
+
+    position: absolute; /* Nuevo */
+    right: 40px; /* Nuevo */
+}
+.menu{
+    display: none; /*Ocultamos el nav*/
+}
+.menu:hover{
+    /*Al pulsar el botón aparece el nav 
+    y nos permite enlazar a la sección*/
+    display:block; 
+}
+/*Posicionamos el nav a la derecha para que quede bajo el botón*/
+.menu{
+    margin-right: 0px;
+}
+/*Posicionamos el menú en columnas
+utilizando FLEX*/
+.navul{
+display: flex;
+flex-direction: column;
+
+position: absolute; /* Nuevo */
+top: 80px; /* Nuevo */
+right: 25px; /* Nuevo */
+
+}
+.menu ul a{
+    /*Bordes a cada elemento anclas*/
+    border: #FFFFFF solid thin; 
+}
+button img{
+    width: 16px;
+}
+.navul ul {
+    /*Desplazamos el submenú desde el margen derecho*/
+    right: 3rem;
+}
+.navul ul li{
+    /*Bordes a cada elemento anclas del submenú*/
+    border: black solid thin;
+}
+}
