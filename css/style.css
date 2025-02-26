@@ -9,6 +9,7 @@
     --claro: #e4e4e4;
     --gris: #302f2f;
     --gris-dark: #282726;
+    --golden: #c79c60;
 
     /* Neutral */
     --very-dark-cyan: hsl(192, 100%, 9%);
@@ -149,12 +150,12 @@ body {
 
 .button {
     display: inline-block;
-    background-color: var(--pink);
+    background-color: var(--claro);
     text-decoration: none;
-    color: var(--very-pale-blue);
+    color: var(--black);
     padding: .7em 2.8em;
     border-radius: 25px;
-    box-shadow: 0 0 3px hsl(322, 100%, 66%, .3);
+    box-shadow: 0 0 3px hsl(35, 48%, 58%, .3);
 }
 
 .hero_img {
@@ -187,7 +188,7 @@ body {
     box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.9);
     
     border-radius: 8px;
-    padding: 2em 1em;
+    /* padding: 2em 1em;  */
 }
 
 .section_img {
@@ -195,10 +196,16 @@ body {
     max-width: 400px;
     display: block;
     margin: 0 auto;
+    /* border-radius: 8px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
+
+
 
 .section_texts {
     text-align: center;
+    padding: 0em 1em 2em 1em
+    
 }
 
 .section_title {
@@ -241,6 +248,11 @@ body {
 
 .email_submit.button {
     background-color: var(--gris);
+    color: white;
+}
+
+.email_submit.button:hover {
+    color: #c79c60;
 }
 
 
@@ -354,5 +366,9 @@ body {
     margin: auto;
     border-radius: 8px;
     border: 1px solid white;
+}
+
+.footer_socialmedia a:hover {
+ border: 1px solid #c79c60;
 }
 
