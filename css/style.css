@@ -223,11 +223,15 @@ body {
 /* EMAIL */
 .email {
     padding: var(--padding-section);
-    background-color: #fff;
+    /* background-color: #fff;
     background-image:linear-gradient(
         #fff 50%, 
         var(--gris) 50%
-    );
+    ); */
+    background-image:linear-gradient(
+        rgba(255, 255, 255, 0.0) 50%, 
+        var(--gris) 50%
+    ); 
 }
 
 .email_container {
@@ -276,7 +280,8 @@ body {
 }
 
 .footer_logo {
-    max-width: 250px;
+    max-width: 275px;
+    max-height: auto;
     display: block;
     margin-bottom: 30px;
 }
@@ -372,3 +377,169 @@ body {
  border: 1px solid #c79c60;
 }
 
+@media (min-width: 768px) {
+    /* NAV */
+    .logo {
+        width: 100%;
+        height: 47px;
+        max-width: 47px;
+        height: auto;
+    }
+    
+    
+    .tit_logo {
+        width: 100%;
+        height: 60px;
+        max-width: 280px; /* Imagen del título del nav  */
+        height: auto;
+    }
+
+    .nav_cta {
+        padding: .8em 3.5em;/* No va a cambiar el tamaño, su padre no tiene font-size */
+    }
+
+    .nav_figure {
+        /* Imagen Logo y Título */
+        gap: 20px;
+    }
+
+    /* Contenido principal del header */
+    .hero_main {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 70px;
+    }   
+
+    .hero_texts {
+        text-align: left;
+        width: 50%;
+    } 
+
+    .hero_title {
+        font-size: 2.5rem;
+    }
+
+    .hero_figure {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero_img {
+        max-width: unset; /* Vuelve a su valor original*/
+    }
+
+    /* Sección */
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    .section {
+        padding: 4em 2.5em;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* Revertimos la imagen del segundo contenedor  (Para ser más escalable, sería mejor .section:nth-child(odd)) */
+    /* .section--reverse {
+        flex-direction: row-reverse; 
+    } */
+
+    /* Revertimos la imagen del segundo contenedor  (Para ser más escalable, sería mejor .section:nth-child(odd)) */
+    main .section:nth-child(even) {
+        flex-direction: row-reverse; 
+    }
+
+    .section_img {
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .section_figure {
+        width: 50%;
+    }
+
+    .section_texts {
+        text-align: inherit; /* Hereda de su padre */
+        width: 50%;
+    }
+
+    .section_title {
+        color: var(--claro);
+        font-size: 1.8rem;
+        font-family: var(--family-headings);
+    }
+
+    .section_paragraph {
+        margin-top: 1em;
+        line-height: 1.5;
+        
+    }
+
+    /* Email */
+
+
+    /* Footer */
+
+    .footer_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer_figure {
+        width: 100%;
+        justify-content: start;
+    }
+
+    .footer_logo {
+        margin-bottom: 0;
+        max-width: 300px;
+    }
+
+    .footer_directions {
+        width: min-content;
+    }
+
+    .footer_list {
+        width: max-content;
+    }
+
+    .footer_list_first {
+        margin: 0;
+    }
+
+    .footer_contact {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin-top: 0;
+    }
+
+    .footer_socialmedia {
+        justify-content: flex-start;
+    }
+
+    .footer_media {
+        display: inline-flex;
+        border: 1px solid #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_copy {
+        margin-top: auto;
+    }
+    
+
+}
