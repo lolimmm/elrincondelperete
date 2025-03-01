@@ -76,11 +76,11 @@ body {
     gap: 15px;
 }
 
-/* .nav_logo {
+.nav_logo, .footer_logo {
     width: 100%;
-    max-width: 150px;
+    max-height: 30px;   
     display: block;
-} */
+} 
 
 .logo {
     width: 100%;
@@ -360,23 +360,31 @@ body {
     gap: 15px;
 }
 
-/* CONTACTO */
+.footer_socialmedia a:hover {
+    border: 1px solid #c79c60;
+}
+
+
+/* PÁGINA CONTACTO */
 .map {
     padding: 2px 0px;
-    width: max-content;
-    
+    width: 80%;
+    max-width: 440px;
 }
 
 .map iframe {
+    width: 100%;
+    
     margin: auto;
     border-radius: 8px;
     border: 1px solid white;
 }
 
-.footer_socialmedia a:hover {
- border: 1px solid #c79c60;
-}
 
+
+
+
+/* Mediaquery */
 @media (min-width: 768px) {
     /* NAV */
     .logo {
@@ -540,6 +548,16 @@ body {
     .footer_copy {
         margin-top: auto;
     }
-    
 
-}
+    /* PÁGINA CONTACTO */
+    .map {
+        padding: 0px;
+    }
+
+    .nav_logo, .footer_logo {
+        width: auto;  
+        max-height: 35px;
+    } 
+
+
+    }
