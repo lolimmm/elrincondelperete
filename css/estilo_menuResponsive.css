@@ -16,6 +16,7 @@
     text-decoration: none; /*Desactivar el subrayado*/
     color: white;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .menu ul li.primerli a{
@@ -30,6 +31,7 @@
     color:#c79c60;
 }
 
+/* Pie de página enlaces*/
 a:hover{
     color:#c79c60;
 } 
@@ -52,13 +54,14 @@ button#burger{
 
 .gold {
     background-color: #c79c60;
+    transition: all 0.5s ease-in-out;
 }
 
 
 
 
 /*El menú hamburguesa aparecerá con esta resolución o menor*/
-@media screen and (max-width:768Px){
+@media screen and (max-width:768px){
 
 /*Configuramos el menú hamburguesa*/
 button#burger{
@@ -77,9 +80,12 @@ button#burger{
     display: block; /*Al pulsar el botón aparece el nav*/
 }
 
-.menu:hover{
-    display:block; /*Al pulsar el botón aparece el nav y nos permite enlazar a la sección*/
+/*.menu:hover{
+    display:block; Al pulsar el botón aparece el nav y nos permite enlazar a la sección
 }
+*/
+
+
 
 .navul{ /*Posicionamos el menú en columnas utilizando FLEX*/
 display: flex;
@@ -88,7 +94,6 @@ flex-direction: column;
 position: absolute; /* Nuevo */
 top: 80px; /* Nuevo */
 right: 25px; /* Nuevo */
-
 }
 
 .menu ul a{
