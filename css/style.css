@@ -416,6 +416,24 @@ video {
     --padding-section: 40px 0;
 }
 
+.section-instagram {
+    width: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.section-instagram {
+    margin: auto;
+    width: 100%;
+}
+
+
+
 
 
 
