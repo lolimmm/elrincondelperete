@@ -210,6 +210,10 @@ body {
     
 }
 
+.section_texts ul {
+    list-style: none;
+}
+
 .section_title {
     /* color: var(--white); */
     font-size: 1.8rem;
@@ -221,6 +225,8 @@ body {
     line-height: 1.5;
     /* color: var(--white); */
 }
+
+
 
 /* Seccion redes */
 .section-instagram {
