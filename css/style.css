@@ -324,6 +324,11 @@ body {
     align-items: baseline;
 }
 
+.footer_paragraph a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .footer_icon {
     position: relative;
     top: 4px;
