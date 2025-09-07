@@ -53,9 +53,16 @@ body {
 
 /* NAV */
 
-/* Si quiero el nav en negro tengo que crear un contenedor que contenga el nav y aplicar esto */
+/* Contenedor que contiene el nav */
 .contenedor_nav {
     background-color: black;
+
+    /* Posicinamiento fijo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 } 
 
 .nav {
@@ -69,7 +76,6 @@ body {
 
 .nav_figure {
     /* Imagen Logo y Título */
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -124,7 +130,7 @@ body {
     border-radius: 8px;
 
     box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.9);
-    padding-top: 60px; 
+    padding-top: 140px; 
     display: flex; /* Para el espaciado entre columnas utilizamos flex-box con gap*/
     flex-direction: column;
     gap: 40px;
@@ -286,19 +292,6 @@ body {
 
 
 
-
-/* main::before {
-    content: '';
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0; */
-    /*background-color: rgba(0, 0, 0, 0.5); *//* Cambia el valor de 0.5 para más o menos oscuridad  */
-    /*z-index: 1;*/ /* Asegúrate de que esté por encima de la imagen */
-/* } */
-
-
 /* FOOTER */
 .footer {
     background-color: var(--gris);
@@ -410,6 +403,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+    margin-top: 80px;
 }
 
 .section-contacto {
@@ -442,6 +436,7 @@ video {
     gap: 10px;
     /* width: 55%; */
     --padding-section: 40px 0;
+    margin-top: 80px;
 }
 
 
