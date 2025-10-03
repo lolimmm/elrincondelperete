@@ -25,18 +25,20 @@
     /* outline: 1px solid red; */
 }
 
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
 body {
     font-family: var(--family-body);
     color: var(--white);
 
-    /* position: relative; */
     background-image: url('../images/fondo-pantalla-1920x1080-GrayRock.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-
-    /*filter: brightness(100%);*/  /* Ajusta la altura según necesites */
 }
 
 
@@ -46,7 +48,7 @@ body {
     max-width: 1200px;
     overflow: hidden;
     margin: 0 auto;
-    padding: var(--padding-section); /* Padding solo para el section de 90px 0 */
+    padding: var(--padding-section); 
 }
 
 
@@ -56,8 +58,6 @@ body {
 /* Contenedor que contiene el nav */
 .contenedor_nav {
     background-color: black;
-
-    /* Posicinamiento fijo */
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +71,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    --padding-section: 0; /* Lo ponemos así por el border-box, no suma el padding (esta propiedad se aplica a todos los de la clase container) */
+    --padding-section: 0;
 }
 
 .nav_figure {
@@ -99,7 +99,7 @@ body {
 .tit_logo {
     width: 100%;
     height: 60px;
-    max-width: 200px; /* Imagen del título del nav  */
+    max-width: 200px;
     height: auto;
 }
 
@@ -108,7 +108,7 @@ body {
     color: var(--very-dark-cyan);
     font-weight: 700;
     background-color: var(--very-pale-blue);
-    padding: .5em 1.5em;/* No va a cambiar el tamaño, su padre no tiene font-size */
+    padding: .5em 1.5em;
     border-radius: 30px;
     box-shadow: 0 0 10px -3px hsl(207, 100%, 98% / .4);
     margin-right: 2px;
@@ -118,20 +118,16 @@ body {
 
 /* HEADER */
 .hero {
-    /* background-color: var(--gris); */
-    
-    --padding-section: 0 0 60px 0; /* Padding en el header solo del bottom */
+    --padding-section: 0 0 60px 0;
 }
 
 
 /* Contenido principal del header */
 .hero_main {
-    /* border: 1px solid white; */
     border-radius: 8px;
-
     box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.9);
     padding-top: 140px; 
-    display: flex; /* Para el espaciado entre columnas utilizamos flex-box con gap*/
+    display: flex;
     flex-direction: column;
     gap: 40px;
     padding-left: 1em;
@@ -183,7 +179,6 @@ body {
 
 
 .section {
-    /* border: 1px solid white; */
     background-color: rgba(255, 255, 255, 0.2);
     color: var(--claro);
     width: 98%;
@@ -194,9 +189,7 @@ body {
     gap: 60px;
 
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.9);
-    
     border-radius: 8px;
-    /* padding: 2em 1em;  */
 }
 
 .section_img {
@@ -204,7 +197,6 @@ body {
     max-width: 400px;
     display: block;
     margin: 0 auto;
-    /* border-radius: 8px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
@@ -221,7 +213,6 @@ body {
 }
 
 .section_title {
-    /* color: var(--white); */
     font-size: 1.8rem;
     font-family: var(--family-headings);
 }
@@ -229,7 +220,6 @@ body {
 .section_paragraph {
     margin-top: 1em;
     line-height: 1.5;
-    /* color: var(--white); */
 }
 
 
@@ -254,11 +244,6 @@ body {
 /* EMAIL */
 .email {
     padding: var(--padding-section);
-    /* background-color: #fff;
-    background-image:linear-gradient(
-        #fff 50%, 
-        var(--gris) 50%
-    ); */
     background-image:linear-gradient(
         rgba(255, 255, 255, 0.0) 50%, 
         var(--gris) 50%
@@ -358,6 +343,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .footer_media {
@@ -375,7 +361,6 @@ body {
 }
 
 .footer_figure {
-    /* Imagen Logo y Título (igual a nav_figure excepto width y justify-content) */
     width: max-content;
     display: flex;
     justify-content: center;
@@ -403,7 +388,6 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
-    /* margin-top: 80px;  */
     margin-top: 20px;
     gap: 20px;
 }
@@ -415,8 +399,6 @@ body {
     display: block;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
 }
-
-
 
 
 
@@ -436,12 +418,9 @@ video {
 /* PÁGINA CARTA */
 .main.carta {
     gap: 10px;
-    /* width: 55%; */
     --padding-section: 40px 0;
     margin-top: 80px;
 }
-
-
 
 
 
@@ -460,12 +439,12 @@ video {
     .tit_logo {
         width: 100%;
         height: 60px;
-        max-width: 280px; /* Imagen del título del nav  */
+        max-width: 280px; 
         height: auto;
     }
 
     .nav_cta {
-        padding: .8em 3.5em;/* No va a cambiar el tamaño, su padre no tiene font-size */
+        padding: .8em 3.5em;
     }
 
     .nav_figure {
@@ -496,7 +475,7 @@ video {
     }
 
     .hero_img {
-        max-width: unset; /* Vuelve a su valor original*/
+        max-width: unset; 
     }
 
     /* Sección */
@@ -514,12 +493,7 @@ video {
     }
 
 
-    /* Revertimos la imagen del segundo contenedor  (Para ser más escalable, sería mejor .section:nth-child(odd)) */
-    /* .section--reverse {
-        flex-direction: row-reverse; 
-    } */
-
-    /* Revertimos la imagen del segundo contenedor  (Para ser más escalable, sería mejor .section:nth-child(odd)) */
+    /* Revertimos la imagen del segundo contenedor */
     main .section:nth-child(even) {
         flex-direction: row-reverse; 
     }
@@ -537,7 +511,7 @@ video {
     }
 
     .section_texts {
-        text-align: inherit; /* Hereda de su padre */
+        text-align: inherit; 
         width: 50%;
     }
 
@@ -576,7 +550,7 @@ video {
     }
 
     .footer_directions {
-        width: min-content;
+        max-width: 270px;
     }
 
     .footer_list {
@@ -615,13 +589,8 @@ video {
     /* PÁGINA CONTACTO */
 
     .main-contacto {
-        /* display: flex;
-        flex-direction: row;
-        justify-content: space-around; */
         gap: 20px;
     }
-
-
 
     .nav_logo, .footer_logo {
         width: auto;  

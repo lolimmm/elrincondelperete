@@ -1,30 +1,29 @@
 
 .menu ul{
-    margin: 0px; /*Igualamos a cero tanto el margen como el padding y eliminamos los marcadores predeterminados*/
+    margin: 0px; 
     padding: 0px;
-    list-style-type: none; /*Establecemos el máximo ancho de la barra de navegación y el color de fondo*/
+    list-style-type: none; 
     max-width: 42rem;
     background-color: black; 
-    
-    display: flex; /*Posicionamos con FLEX*/
+    display: flex; 
 }
 
 .menu ul a{
-    display: block; /* Hacemos que los elementos ancla de la lista se comporten como botones*/
-    padding: 0 2em; /*Relleno a la derecha e izquierda de las anclas*/
-    line-height: 2.1em; /*Centrar verticalmente el texto*/
-    text-decoration: none; /*Desactivar el subrayado*/
+    display: block; 
+    padding: 0 2em; 
+    line-height: 2.1em; 
+    text-decoration: none; 
     color: white;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 .menu ul li.primerli a{
-    border-left: none; /*Para eliminar espacio a la izquierda*/
+    border-left: none; 
 }
 
 .menu ul a:hover{
-    color:#c79c60; /*Cambiar el color del elemento ancla cuando se coloque el puntero*/
+    color:#c79c60; 
 } 
 
 .nav-link a:active {
@@ -42,9 +41,8 @@ a:hover{
 /*--------------------*/
 
 button#burger{
-    display: none; /*Ocultamos el botón*/
+    display: none; 
     cursor: pointer;
-    
     border: none;
 }
 
@@ -61,52 +59,40 @@ button#burger{
 
 
 /*El menú hamburguesa aparecerá con esta resolución o menor*/
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
 
-/*Configuramos el menú hamburguesa*/
-button#burger{
-    display: block; /*Se muestra el botón*/
-    margin-left: auto; /*Damos margen automático izquierdo para posicionar a la derecha*/
-    right: 40px; /* Nuevo */
+    button#burger {
+        display: block;
+        margin-left: auto;
+        right: 40px;
+    }
 
-}
+    .menu {
+        display: none;
+    }
 
-.menu{
-    display: none; /*Ocultamos el nav*/
-}
+    .menuBlock {
+        display: block;
+    }
 
-/* button#burger:focus + .menu{ // Lo hacemos mejor con js*/ 
-.menuBlock {
-    display: block; /*Al pulsar el botón aparece el nav*/
-}
+    .navul {
+        display: flex;
+        flex-direction: column;
 
-/*.menu:hover{
-    display:block; Al pulsar el botón aparece el nav y nos permite enlazar a la sección
-}
-*/
+        position: absolute;
+        top: 80px;
+        right: 25px;
+    }
 
+    .menu ul a {
+        border-bottom: #FFFFFF solid thin;
+        font-size: 0.9rem;
+    }
 
-
-.navul{ /*Posicionamos el menú en columnas utilizando FLEX*/
-display: flex;
-flex-direction: column;
-
-position: absolute; /* Nuevo */
-top: 80px; /* Nuevo */
-right: 25px; /* Nuevo */
-}
-
-.menu ul a{
-    border-bottom: #FFFFFF solid thin; /* Bordes bottom */
-    font-size: 0.9rem;
-}
-button img{
-    width: 16px;
-    height: 16px;
-    margin-top: 2px;
-}
-
-
-
+    button img {
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+    }
 
 }
